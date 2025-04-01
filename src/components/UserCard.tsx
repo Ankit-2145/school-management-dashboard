@@ -2,7 +2,7 @@ import { MoreHorizontal } from "lucide-react";
 
 const UserCard = ({ type }: { type: string }) => {
   return (
-    <div className="rounded-2xl odd:bg-Purple even:bg-Yellow p-4 flex-1 min-w-[130px]">
+    <div className="shadow-md rounded-2xl odd:bg-Purple even:bg-Yellow p-4 flex-1 min-w-[130px]">
       <div className="flex justify-between items-center">
         <span className="text-[10px] bg-white px-2 py-1 rounded-full text-green-600">
           2025-26
