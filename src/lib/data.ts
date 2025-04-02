@@ -30,7 +30,7 @@ export const teachersData = [
   {
     id: 3,
     teacherId: "1234567890",
-    name: "Mike Geller",
+    name: "Max verstappen",
     email: "mike@geller.com",
     photo:
       "https://images.pexels.com/photos/428328/pexels-photo-428328.jpeg?auto=compress&cs=tinysrgb&w=1200",
