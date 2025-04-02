@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Pencil, Plus, Trash2, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import TeacherForm from "./forms/TeacherForm";
 
 const FormModal = ({
   table,
@@ -59,7 +60,7 @@ const FormModal = ({
         </Button>
       </form>
     ) : (
-      "create or update form"
+      <TeacherForm type="create" />
     );
   };
 
