@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Pagination from "@/components/Pagination";
 import TableSearch from "@/components/TableSearch";
 import { Pencil, Plus, Settings2, SortDesc, Trash2 } from "lucide-react";
+import FormModal from "@/components/FormModal";
 
 type Exam = {
   id: number;
@@ -52,15 +53,11 @@ const ExamListPage = () => {
 
       <td>
         <div className="flex items-center gap-2">
-          <Link href={`/list/teachers/${item.id}`}>
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-Sky">
-              <Pencil className="w-4 h-4" />
-            </button>
-          </Link>
           {role === "admin" && (
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-Purple">
-              <Trash2 className="w-4 h-4" />
-            </button>
+            <>
+              <FormModal table="exam" type="update" data={item} />
+              <FormModal table="exam" type="delete" id={item.id} />
+            </>
           )}
         </div>
       </td>
@@ -88,12 +85,9 @@ const ExamListPage = () => {
               <SortDesc className="w-4 h-5 text-black" />
             </Button>
             {role === "admin" && (
-              <Button
-                size="icon"
-                className="rounded-full bg-Yellow hover:bg-Yellow/90 cursor-pointer"
-              >
-                <Plus className="w-4 h-5 text-black" />
-              </Button>
+              <>
+                <FormModal table="exam" type="create" />
+              </>
             )}
           </div>
         </div>

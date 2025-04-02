@@ -1,3 +1,4 @@
+import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -88,9 +89,10 @@ const TeacherListPage = () => {
             </button>
           </Link>
           {role === "admin" && (
-            <button className="w-7 h-7 flex items-center justify-center rounded-full bg-Purple">
-              <Trash2 className="w-4 h-4" />
-            </button>
+            // <button className="w-7 h-7 flex items-center justify-center rounded-full bg-Purple">
+            //   <Trash2 className="w-4 h-4" />
+            // </button>
+            <FormModal table="teacher" type="delete" id={item.id} />
           )}
         </div>
       </td>
@@ -118,12 +120,13 @@ const TeacherListPage = () => {
               <SortDesc className="w-4 h-5 text-black" />
             </Button>
             {role === "admin" && (
-              <Button
-                size="icon"
-                className="rounded-full bg-Yellow hover:bg-Yellow/90 cursor-pointer"
-              >
-                <Plus className="w-4 h-5 text-black" />
-              </Button>
+              // <Button
+              //   size="icon"
+              //   className="rounded-full bg-Yellow hover:bg-Yellow/90 cursor-pointer"
+              // >
+              //   <Plus className="w-4 h-5 text-black" />
+              // </Button>
+              <FormModal table="teacher" type="create" />
             )}
           </div>
         </div>
