@@ -19,7 +19,6 @@ The **School Management Dashboard** is a web application designed to help school
 - **Styling:** Tailwind CSS
 - **Database:** MongoDB
 - **Authentication:** NextAuth.js / JWT
-- **State Management:** Context API / Redux (if applicable)
 
 ## 📂 Project Structure
 
@@ -52,7 +51,3 @@ npm install
 ```bash
 npm run dev
 ```
-
-## 🚀 Deployment
-
-You can deploy the project on **Vercel** or **Netlify**. Ensure environment variables are configured properly.
